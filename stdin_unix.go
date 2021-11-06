@@ -162,7 +162,7 @@ func (tty *stdIoTty) NotifyResize(cb func()) {
 func NewStdIoTty() (Tty, error) {
 	tty := &stdIoTty{
 		sig: make(chan os.Signal),
-		in: os.Stdin,
+		in:  os.Stdin,
 		out: os.Stdout,
 	}
 	var err error
